@@ -1,0 +1,9 @@
+GIT pamācība
+
+
+1. Inicializēt git projektam: git init
+2. Pievienot visus esošos projekta failus pie git: git add -A
+3. Lai redzēt git statusu: git status
+4. Fiksēt izmaiņas projektam: git commit -M"Apraksts";
+
+

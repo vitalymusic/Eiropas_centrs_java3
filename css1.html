@@ -10,7 +10,7 @@
         h1,h2,p{
             font-size: 35pt;
             font-family:"Arial";
-            background-color: rgba(50, 115, 220, 0.3);
+            background-color: rgba(255, 255, 255, 0.562);
             color:red;
             text-align: center;
             /* width:100%; */
@@ -24,6 +24,10 @@
         }
         body{
             margin:0px;
+            background-image: url("https://wallpapercave.com/wp/Jg14FgM.jpg");
+            background-attachment: fixed;
+            background-size: 100%;
+
             
         }
         h1{
@@ -38,7 +42,9 @@
         }
        p{
             margin:10px auto;
+            padding: 20px;
             /* Margin:auto liek bloku centrā ja ta platums nav 100% */
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.355);
         }
         h1,h2{
             
@@ -59,8 +65,28 @@
             border:1px solid rgba(0, 0, 0, 0.196);
             border-radius:10px;
             margin:30px;
+            /* float regulē elementa novietojumu */
         }
+        img.laba-puse{
+            float:right;
+            /* float regulē elementa novietojumu */
+        }
+        img.kreisa-puse{
+            float:left;
+            /* float regulē elementa novietojumu */
 
+
+            /* Klasifikātors ļauj klasificēt objektus */
+        }
+        img.centrs{
+            display: block;
+            margin:30px auto;
+        }
+        div.gradient{
+            height: 50px;
+            background-image: linear-gradient(rgba(255, 0, 0, 0.699), rgba(0, 0, 0, 0.726));
+            margin-bottom:30px;
+        }
     </style>
 </head>
 <body>
@@ -70,10 +96,29 @@
     <h2>
         Mācamies stilizēt lapas
     </h2>
+    <div class="gradient"></div>
     <p>
+        <img src="atteli/attels1.jpeg" alt="" class="laba-puse">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        <img src="atteli/attels1.jpeg" alt="" class="kreisa-puse">
+        Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        <img src="atteli/attels1.jpeg" alt="" class="centrs">
     </p>
-    <img src="atteli/attels1.jpeg" alt="">
+    <div class="gradient"></div>
+    <p>
+        <img src="atteli/attels1.jpeg" alt="" class="laba-puse">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        <img src="atteli/attels1.jpeg" alt="" class="kreisa-puse">
+        Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem sint dolorum itaque at voluptatibus delectus soluta cum illo culpa aut libero saepe, enim doloremque ducimus maiores! Dolore ea minima sed.
+        <img src="atteli/attels1.jpeg" alt="" class="centrs">
+    </p>
+    
     
     <!-- 
         Izveidot lapu ar:

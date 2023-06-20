@@ -21,4 +21,7 @@ Jāizveido GIT repozitorijs vietnē GITHUB
 Jāsavieno pie lokālā git remote add 
 ********
 
+Ja nesanāk aktualizēt GIT repozitoriju tad ielikt šo iestatījumu: 
+git config pull.rebase true
+
 

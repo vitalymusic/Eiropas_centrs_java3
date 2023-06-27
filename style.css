@@ -127,3 +127,58 @@ header{
 
 
 /* footeris */
+
+/* Chats */
+    #chat{
+        position: absolute;
+        top:-297px;
+        right:50px;
+        background-color: blue;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 10px black;
+        width:300px;
+        box-sizing: border-box;
+        transition: all .3s ease-in-out;
+    }
+
+    #chat input, #chat textarea{
+        display: block;
+        width: 100%;
+        margin:10px 0px;
+        padding: 10px 0px;
+        text-align: center;
+        border-radius: 5px;
+        border-width: 2px;
+        border-color:#f1f1f1;
+    }
+    #chat input:focus, #chat textarea:focus{
+            border-color:#282a35;
+            border-width: 2px;
+            border-style: solid;
+    }
+    
+    #chat input[type="submit"]{
+        background-color: #282A35;
+        color: #f1f1f1; 
+        border:none;
+        cursor: pointer;
+    }
+    #chat input[type="submit"]:active{
+        background-color: #08090b;
+        color: #f1f1f1; 
+        border:none;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out;
+    }
+
+    #chat h3{
+        color:white;
+    }
+
+    #chat:hover{
+        
+        top:0px;
+        transition: all .5s ease-in-out;
+    }
+
+/* Chats */

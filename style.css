@@ -1,8 +1,51 @@
+body{
+    padding:0px;margin: 0px;
+
+
+
+}
 header{
     /* Elementa atlase pēc tā nosaukums */
     background-color: blue;
+    padding: 20px 0px;
+    display:flex;
+    justify-content: center;
+    gap:20px
 }
 .header_logo{
     /* Elementa atlase pēc atribūta class */
 
 }
+.header_contacts{
+
+}
+
+/* Navigācija */
+    nav{
+       height: 32px;
+       background-color: #282A35;
+       color: #f1f1f1; 
+       display:flex;
+       align-items: center;
+    }
+
+    nav ul{
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        gap:20px;
+        list-style-type: none;
+    }
+    nav li{
+
+    }
+    nav a{
+        color: #f1f1f1; 
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+/* Navigācija */

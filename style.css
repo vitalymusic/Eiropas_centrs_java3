@@ -58,6 +58,8 @@ header{
         text-transform: uppercase;
         font-weight: bold;
         font-family: sans-serif;
+        display: inline-block;
+        transform: translate(0px,0px);
     }
 
 /* Navigācija */
@@ -298,3 +300,66 @@ nav{
 
 
 /* Lapas sagatavošana printēšanai */
+
+
+
+/* Animācija */
+nav a:hover{
+    color:#1BB9E4;
+    /* transform: rotate(10deg); */
+    transform:translate(0px, -5px);
+    transition: all .5s cubic-bezier(0,.92,.3,1.26);
+
+}
+
+@keyframes animacija1 {
+    0%,100%{
+        opacity: 0%;
+        transform: scale(.2);
+        color:white;
+        transform: rotate(0deg);
+        
+    }
+    75%{
+        opacity: 100%;
+        transform: scale(1);
+        
+        color:red;
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes animacija2{
+    0%,100%{
+        transform:rotate(-5deg)
+    }
+    50%{
+        transform:rotate(5deg)
+    }
+}
+@keyframes animacija3{
+    0%,100%{
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(0.1)
+    }
+}
+
+
+.logo_title{
+    animation-name: animacija1;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+
+}
+.logo_img{
+    animation: animacija2 .5s infinite;
+}
+.header_logo{
+    animation: animacija3 5s 1;
+}
+
+
+
+/* Animācija */

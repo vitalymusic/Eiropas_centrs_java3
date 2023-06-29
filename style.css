@@ -287,3 +287,14 @@ nav{
 
 
 /* adaptīvais dizains */
+
+
+/* Lapas sagatavošana printēšanai */
+@media print{
+    #chat{
+        display: none;
+    }
+}
+
+
+/* Lapas sagatavošana printēšanai */

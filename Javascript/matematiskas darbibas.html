@@ -1,0 +1,41 @@
+<script>
+    // + - * / ** ^ () % 
+
+
+    let var1 = 10,var2 = 25.6;
+    var1++; var2++; //increment
+    var1--; var2--; //decrement
+
+    var1+=10; 
+    //pieskaita pie tā kas ir mainigajā un saglabā atpakaļ mainīgajā
+    // var1 = var1+10 *= -= /=
+
+
+
+    var answer = var1 + var2;
+    // var answer = var1 ^ var2;
+
+   
+
+
+    // document.write(answer);
+    // document.write(Math.round(var2));
+
+    document.write(Math.trunc(Math.random()*255));
+
+    // background:rgb(99, 156, 105)
+
+    // Neliela maģija!!!!!!!!
+    
+    window.setInterval(()=>{
+        red = Math.trunc(Math.random()*255);
+        green = Math.trunc(Math.random()*255);
+        blue = Math.trunc(Math.random()*255);
+        document.body.style = `background:rgb(${red},${green},${blue}`;
+    },2000)
+    
+
+
+
+
+</script>

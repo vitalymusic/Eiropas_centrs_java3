@@ -1,0 +1,21 @@
+Izpēti dizainu Figma: Atver Figma un izpēti dizaina struktūru. Identificē komponentes, izkārtojumu un stilus, ko vēlies pārveidot uz HTML.
+
+Eksportē grafiskos elementus: Ja dizainā ir attēli, ikonas vai citi grafiskie elementi, eksportē tos no Figma atbilstošā formātā (piemēram, PNG, SVG), lai tos varētu izmantot HTML kodā.
+
+Izveido HTML failu: Izveido jaunu HTML failu, izmantojot teksta redaktoru vai Integrēto Izstrādes Vidi (IDE). Sāc ar pamata HTML struktūru, pievienojot <!DOCTYPE html> deklarāciju un atverot un aizverot <html>, <head> un <body> tagus.
+
+Saistīt CSS un JavaScript: Ja Figma dizainā ir iekļauti CSS stili vai mijiedarbība, kas prasa JavaScript, savieno CSS failu(s) un JavaScript failu(s) ar HTML failu, izmantojot <link> un <script> tagus attiecīgi. Pārbaudi failu ceļus un pielāgo tos pēc nepieciešamības.
+
+Konvertē dizaina struktūru: Rūpīgi izpēti Figma dizaina izkārtojumu un struktūru. Identificē sadaļas, konteinerus un elementus, piemēram, galvenes, kājas, izvēlnes un saturu. Izmanto HTML tagus, piemēram, <div>, <header>, <nav>, <footer> un citus, lai atkārtoti izveidotu struktūru HTML failā.
+
+Tulko stilus uz CSS: Analizē dizainu Figma, lai saprastu, kādi stili tiek pielietoti katram elementam. Pārveido stilus uz CSS noteikumiem un pievieno tos HTML failā. Izmanto klases vai ID izvēlētājus, lai mērķētu konkrētus elementus un piemērotu attiecīgos stilus. CSS kodu vari ievietot <style> blokā <head> sadaļā vai saistīt ārējo CSS failu, izmantojot <link> tagu.
+
+Pievieno saturu: Ievieto teksta saturu no Figma dizaina HTML failā. Izmanto atbilstošus HTML tagus, piemēram, <h1>, <p>, <ul>, <li> un citus, lai strukturētu un formatētu saturu atbilstoši dizainam.
+
+Ievieto attēlus: Ja dizains ietver attēlus, ievieto tos HTML failā, izmantojot <img> tagu. Iestatī src atribūtu, norādot attēla faila ceļu, ko esi eksportējis no Figma.
+
+Precizē izkārtojumu: Pielāgo HTML elementu izkārtojumu, izmantojot CSS īpašības, piemēram, margin, padding, display, position un citas. Pārliecinies, ka elementi ir pareizi pozicionēti un stilizēti, atbilstoši Figma dizainam.
+
+Testē un pielabo: Saglabā HTML failu un atver to tīmekļa pārlūkprogrammā, lai priekšskatītu dizainu. Testē tā responsivitāti un mijiedarbību. Veic nepieciešamos labojumus HTML un CSS kodā, pamatojoties uz veiktajiem testiem, līdz sasniedz vēlamo rezultātu.
+
+Atcerieties, ka sarežģīta dizaina pārveide no Figma uz HTML var prasīt daudz laika, īpaši, ja dizains ietver sarežģītas mijiedarbības vai animācijas. Lai veiksmīgi pārveidotu dizainu, ir svarīgi labi pārzināt HTML, CSS un JavaScript.

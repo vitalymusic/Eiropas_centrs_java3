@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulātors</title>
+    <style>
+        .alert{
+            width: 50%;
+            border: 2px solid red;
+            background-color:rgb(164, 252, 159);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+      <script>
+            // elektrības izmaksas
+
+            // 1. lietotājs ievada cik kw patērē mēnesī
+             // 2. elektrības cena
+
+            //  3. sareizināt vidējo uz cenu, noapaļot un izvadīt gada izlietotu elektrību un summu
+
+            elektriba = +prompt('Ievadiet vidējo elektrības patēriņu mēnesī');
+            cena = +prompt('Ievadiet elektrības cenu par vienu kW/h');
+
+
+            function elektribasPaterinsMenesi(elektriba,cena){
+                return elektriba*cena;
+            }
+
+            function elektribasPaterinsGada(elektr){
+                return elektr*12
+            }
+            result = elektribasPaterinsMenesi(elektriba,cena);
+
+            document.write(`
+                <div class="alert">elektrības izmaksas mēnesī ir: ${result}</div>
+            `);
+            document.write(`
+                <div class="alert">elektrības izmaksas gadā ir: ${elektribasPaterinsGada(result)}</div>
+            `);
+
+            // ja nepieciešams skaitļu vajag noapaļot
+
+      </script>
+    
+</body>
+</html>

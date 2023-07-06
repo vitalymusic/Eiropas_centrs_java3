@@ -1,0 +1,52 @@
+<script>
+    // Cikli
+
+
+    // 1. Izvadīsim skaitļus uz akrāna ar dažiem cikliem
+
+
+        // let count = 0
+    // while(count<100){
+    //     document.write('<h1>'+count+'</h1>');
+    //     count++;
+    // }
+    // do{
+    //     document.write('<h1>'+count+'</h1>');
+    //     count++;
+    // }
+    // while(count<100);
+
+    // for(let count = 0;count<100;count++){
+    //     document.write('<h1>'+count+'</h1>');
+    // }
+
+    dati = [
+    "Jānis",
+    "Anna",
+    "Andris",
+    "Juris"
+];
+for(let item = 0;item<dati.length;item++){
+        document.write('<h1>'+dati[item]+'</h1>');
+    }
+
+    tabula = [
+        ["Jānis","Anna","Andris","Juris"],
+        [333,555,666,777],
+        ["adrese1","adrese2","adrese3","adrese4"]
+    ];
+
+    let table = "<table border='1'>";
+
+      for(i=0;i<tabula.length;i++){
+        table+="<tr>";
+            for(j=0;j<tabula[i].length;j++){
+                table+="<td>"+tabula[i][j]+"</td>";
+            }
+        table+="<tr>";     
+      }   
+    
+      table+="</table>"
+      document.write(table);
+
+</script>

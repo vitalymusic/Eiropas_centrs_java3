@@ -1,0 +1,43 @@
+<script>
+    teksts1 = "Jauns teksts";
+    teksts2 = '<h1>Testējam tekstu</h1>';
+    teksts3 = `
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Work</a>
+        <a href="#">Testimonials</a>
+        <a href="#">About</a>
+    </nav>
+    `;
+
+
+    document.write(teksts3);
+    document.write(teksts1+teksts2+" manuāli pievienots teksts!");
+
+    teksts1+="<br>otrs teksts";
+
+    document.write("<br>"+teksts1);
+    document.write(teksts1.length);
+    document.write(teksts1[0],teksts1[1],teksts1[2]);
+
+    document.write(teksts2.slice(0,30));
+    // Izgriež no teksta daļu sākot ar un līdz noteiktam simbolam
+
+    document.write(teksts2.toUpperCase());
+    document.write(teksts2.toLowerCase());
+// Maina teksta burtu reģistru
+
+document.write(teksts2.replace("h1","p"));
+
+// document.write(teksts2.search("</h1>"));
+document.write(teksts2[teksts2.search("1")]);
+izvēlne = "Galvenā,Par mums,Kontakti";
+
+console.log(izvēlne.split(','));
+
+// Sadala tekstu vairākās daļas pēc atdalošā simbola
+
+
+
+
+</script>

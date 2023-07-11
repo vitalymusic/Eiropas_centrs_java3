@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .answer{
+        .answer,.atteli{
             border:3px  solid red;
             padding:20px;
             color:red;
         }
         h1{
             color:green
+        }
+        .atteli img{
+            width: 100%;
+        }
+        .atteli{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap:10px;
         }
     </style>
 </head>
@@ -22,13 +30,49 @@
     <div class="answer">
 
     </div> 
+    <p>
+
+    </p>
+
+    <div class="atteli">
+
+    </div>
     
     <script>
-        text = "<h2>Šo tekstu izvadu ar JS</h2>";
+        text = "Šo tekstu izvadu ar JS";
         document.querySelector('.answer').innerHTML = text;
         document.querySelector('h1').innerHTML = text;
+        document.querySelector('p').innerHTML = text;
 
 
+        
+
+
+        // https://loremflickr.com/320/240/dog
+
+
+        bildes = [
+            "https://carwow-uk-wp-3.imgix.net/18015-MC20BluInfinito-scaled-e1666008987698.jpg",
+            "https://vid.alarabiya.net/images/2023/04/12/2d220739-e6e3-4f4a-86f0-672691659959/2d220739-e6e3-4f4a-86f0-672691659959.jpg?crop=1:1&width=1000",
+            "https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1618602532707-3OAII3QVHYKCW3KJ1HJU/cars_boast.jpg",
+            "https://content-images.carmax.com/qeontfmijmzv/MY19MKj0XutK084z874jt/9632621fd8464b5c0e54a9dee64ad4e5/tesla.jpg"
+        ];
+
+        bildes2 = [];
+        for(i=0;i<100;i++){
+            bildes2.push("https://loremflickr.com/320/240/dog?random="+(i+1));
+        }
+       
+
+        out = "";
+        for(let item = 0;item<bildes2.length;item++){
+           
+             out+=`
+                <img src="${bildes2[item]}" alt="">
+            `; 
+            
+        }
+    document.querySelector('.atteli').innerHTML = out;
     </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Pirmais virsraksts</h1>   
+     <h1>Otrais virsraksts</h1>   
+     <h1>Trešais virsraksts</h1>   
+
+     <script>
+        virsraksti = document.querySelectorAll('h1');
+
+        for(virsraksts of virsraksti){
+            virsraksts.onclick = function(){
+                this.style.color = "red";
+            }
+            virsraksts.ondblclick = function(){
+                this.style.display = "none";
+            }
+
+        }
+
+     </script>
+
+     <!-- Uzdevums stundai
+        Izveidot jaunu dokumentu ar 3 virsrakstiem.
+        Klikšķinot uz katra virsraksta mainās burtu krāsa, dubultklikšķis uz virsraksta noņem to nost
+        dubultklikšķis -> ondblclick
+        
+        15 minūtes
+    -->
+</body>
+</html>

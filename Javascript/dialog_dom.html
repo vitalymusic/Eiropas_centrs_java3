@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=§, initial-scale=1.0">
+    <title>Dialogi</title>
+    <style>
+        body{margin:0;padding:0}
+
+        
+        div.black{
+            background-color:rgba(0, 0, 0, 0.657);
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 100%;
+            display:none;
+            justify-content:center;
+            align-items:center;
+            
+
+        }
+        .dialog{
+            width: 75%;
+            border:2px solid white;
+            padding:30px;
+            color:white;
+            display: none;
+        }
+        .show{
+            display: flex !important;
+        }
+        .show_dialog{
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dialoga logi</h1>
+
+    <button href="dialog1">Pirmais dialogs</button>
+    <button href="dialog2">Otrais dialogs</button>
+    <button href="dialog3">Trešais dialogs</button>
+
+<div class="black">
+    <div class="dialog" id="dialog1">
+        <button>Close</button>
+        <h2>Dialogs 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci repellendus tempora officiis facere pariatur corporis maiores voluptatum recusandae architecto ullam, deleniti neque minima quas veritatis obcaecati eos rem fugiat.</p>
+    </div>
+    <div class="dialog" id="dialog2">
+        <button>Close</button>
+        <h2>Dialogs 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci repellendus tempora officiis facere pariatur corporis maiores voluptatum recusandae architecto ullam, deleniti neque minima quas veritatis obcaecati eos rem fugiat.</p>
+    </div>
+    <div class="dialog" id="dialog3">
+        <button>Close</button>
+        <h2>Dialogs 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci repellendus tempora officiis facere pariatur corporis maiores voluptatum recusandae architecto ullam, deleniti neque minima quas veritatis obcaecati eos rem fugiat.</p>
+    </div>
+</div>
+
+
+<script>
+    buttons = document.querySelectorAll('button');
+    for(button of buttons){
+        button.onclick = function(){
+            showDialog(this.getAttribute('href'));
+        }
+    }
+
+
+    function showDialog(id){
+        console.log(id);
+        backgroundFill = document.querySelector('.black');
+        activeDialog = document.querySelector('#'+id);
+
+        backgroundFill.classList.add('show');
+        activeDialog.classList.add('show_dialog');
+
+
+        // Ieprogrammēt pogu Close 
+
+
+
+    }
+</script>
+</body>
+</html>

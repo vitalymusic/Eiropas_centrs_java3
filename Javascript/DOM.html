@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .futeris{
+            height: 300px;
+            background-color: bisque;
+            color:green;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            // kods nāk šeit
+        let titleH1 = document.querySelector(".title h1");
+        let titleDiv = document.querySelector(".title")
+        // satura maiņa
+        // title.innerHTML = "Satura maiņa";
+        titleH1.innerText = "Satura maiņa";
+        // Izskata maiņa
+        titleH1.style.color="red";
+        // Ja izmanto parametru, kas rakstār ar vairākiem vārdiem tad sākot ar otru vārdu raksta ar lielu burtu, viss rakstās kopā 
+        titleH1.style.textAlign="center";
+        titleH1.style.borderBottom = "solid 1px";
+        titleH1.style.borderBottomColor="yellow";
+        // title.style.borderBottomType="solid";
+        // title.style.display = "none";   
+        // Noslēpt objektu 
+
+            // Pievienot klasi pie objekta
+            document.querySelector("footer").classList.add("futeris");
+            document.querySelector("footer").classList.remove("futeris");
+            // document.querySelector("footer").classList.toggle("futeris");
+            let title2 = document.createElement("h2");
+            title2.append("teksts 2");
+            titleDiv.append(title2);
+            
+            // Atribūtu lasīšana un rakstīšana ar JS
+            imageUrl = "https://www.freecodecamp.org/news/content/images/2023/04/JavaScript-Blog-Cover.png";
+            imgEl = document.querySelector("img");
+            // imgEl.src = imageUrl;
+            imgEl.setAttribute("src", imageUrl);
+            title2.innerText = imgEl.getAttribute("title");
+
+            tableTd = document.querySelectorAll("table td");
+            console.log(tableTd);
+
+
+            for(item of tableTd){
+                item.style.border = "2px solid red"; 
+            }
+            // Ja nepieciešams apstrādāt vairākus vienādus elementus izmantojam querySelectorAll un ciklu for->of
+
+            // tableTd.style.border = "2px solid red"; 
+
+           
+
+
+
+
+            // notikumu pievienotšana
+
+            button = document.querySelector(".form button");
+            button.onclick = function(){
+                let value = document.querySelector("input[name='email']").value;
+                imgEl.setAttribute("src", value);
+            }
+
+            colorSelector = document.querySelector("input[name='background-color']");
+            colorSelector.onchange = function(){
+                background = colorSelector.value;
+                document.body.style.backgroundColor = background;
+            }
+            
+
+            // notikumi 
+
+            /*
+                        Event	Description
+            onchange	An HTML element has been changed
+            onclick	The user clicks an HTML element
+            onmouseover	The user moves the mouse over an HTML element
+            onmouseout	The user moves the mouse away from an HTML element
+            onkeydown	The user pushes a keyboard key
+            onload	The browser has finished loading the page
+
+
+*/
+
+
+            // iestatīt tabulas platumu:
+            document.querySelector("table").setAttribute("width","50%");
+
+
+            //  tableTd[4].parentNode.style.backgroundColor = "yellow";
+
+            for(item of tableTd){
+                item.onmouseover = function(){
+                    // console.log(this);
+                    for(tableRow of document.querySelectorAll("table tr")){
+                        tableRow.style.backgroundColor = "";
+                    }
+
+                    this.parentNode.style.backgroundColor = "yellow";
+                }; 
+            }
+
+        })
+        
+    </script>
+</head>
+<body>
+    <!-- DOM - Document Object Model -->
+<div class="picker">
+    <input type="color" name="background-color" id="">
+</div>
+    <div class="title">
+        <h1></h1>
+        <img src="" alt="" title="Mans jauns attēls">
+    </div>
+
+    <table>
+        <tr>
+            <td>viens</td>
+            <td>divi</td>
+            <td>trīs</td>
+        </tr>  
+        <tr>
+            <td>viens</td>
+            <td>divi</td>
+            <td>trīs</td>
+        </tr>  
+        <tr>
+            <td>viens</td>
+            <td>divi</td>
+            <td>trīs</td>
+        </tr>    
+    </table>
+
+    <h1>Darbs ar formas elementiem</h1>
+    <div class="form">
+        <input type="email" name="email" id="">
+        <button>OK</button>
+    </div>
+       
+    
+    <footer>
+       teksts
+    </footer>
+
+
+    <!-- <script>
+        let title = document.querySelector(".title h1");
+        console.log(title);
+    </script> -->
+
+
+    <!-- Uzdevums stundai
+        Izveidot jaunu dokumentu ar 3 virsrakstiem.
+        Klikšķinot uz katra virsraksta mainās burtu krāsa, dubultklikšķis uz virsraksta noņem to nost
+        dubultklikšķis -> ondblclick
+    
+    -->
+</body>
+</html>

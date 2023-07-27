@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formu apstrāde</title>
+    <style>
+        label{
+            display: block;
+            margin:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registrācijas forma</h1>
+
+
+    <form action="">
+        <label >
+            Jūsu vārds:
+            <input type="text" name="name" id="">
+        </label>
+        <label >
+            Jūsu uzvārds:
+            <input type="text" name="surname" id="">
+        </label>
+        <label >
+            Jūsu epasts:
+            <input type="email" name="email" id="">
+        </label>
+        <label >
+            Jūsu tālrunis:
+            <input type="text" name="phone" id="">
+        </label>
+        <input type="submit" value="Reģistrēties">
+        
+        
+        
+        
+    </form>
+
+    <a href="https:google.lv">google</a>
+
+    
+
+    <script>
+        // Pārlūka noklusētās uzvedības maiņa
+
+        document.querySelector("a").onclick  = function(event) {
+            event.preventDefault();
+            window.open("https://facebook.com", '');
+        }
+
+       
+        form = document.querySelector("form");
+        form.onsubmit = function(event){
+            formErrors = "";
+            
+            if(document.querySelector('ul')){
+                document.querySelector('ul').remove();
+            }
+            event.preventDefault();
+           if(form[0].value.length<3){
+                formErrors +="<li>Vārdam jabūt garākam par 3 simboliem</li>"
+           } 
+           if(form[1].value.length<3){
+                formErrors +="<li>Uzvārdam jabūt garākam par 3 simboliem</li>"
+           } 
+           if(form[2].value.length<3){
+                formErrors +="<li>Visticamāk ēpasts nav ievadīts</li>"
+           }
+            if(form[3].value.length<8){
+                formErrors +="<li>Tālrunis nav norādīts pareizi</li>"
+           }
+
+           form.innerHTML += `
+            <ul>
+                ${formErrors}
+            </ul>    
+           `;
+           if(!formErrors){
+            form.submit();
+           }
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -24,6 +24,7 @@
         <input type="text" name="" id="" maxlength="2" value="0">
         <button class="increment" onclick="increment()">+</button>
       </div>
+
       <div class="checkbox">
         <input type="checkbox" name="" id="" value="true">
         <label for="">Parādīt nākamo sadaļu</label>
@@ -38,6 +39,18 @@
         </select>
       </div>
       <div class="googlemaps">
+
+      </div>
+
+      <div class="tests">
+            <h3>Izvēlies vienu no variantiem</h3>
+           
+            <label ><input type="radio" name="var" id="" value="Pirmais variants">Pirmais variants</label>
+            <label ><input type="radio" name="var" id="" value="Otrais variants">Otrais variants</label>
+            <label ><input type="radio" name="var" id="" value="Trešais variants">Trešais variants</label>
+            <button class="answer">
+                atbildēt
+            </button>
 
       </div>
       <script>
@@ -90,6 +103,27 @@
         }
 
 
+    </script>
+
+
+    <script>
+
+        // tests
+
+        document.querySelector(".answer").onclick = function(){
+            selectedValues = document.querySelectorAll("input[name='var']");
+            value = "";
+            for(selectedValue of selectedValues){
+                if(selectedValue.checked){
+                    value = selectedValue.value;
+                }
+            }
+            
+            answerDiv = document.createElement("div");
+            answerDiv.innerHTML = `Izvēlētā vērtībā ir: ${value}`;
+            document.querySelector('.tests').append(answerDiv);
+            
+        }
     </script>
 </body>
 </html>

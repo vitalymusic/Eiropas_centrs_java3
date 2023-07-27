@@ -44,17 +44,17 @@
 
 <div class="black">
     <div class="dialog" id="dialog1">
-        <button>Close</button>
+        <button class="closeBtn">Close</button>
         <h2>Dialogs 1</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci repellendus tempora officiis facere pariatur corporis maiores voluptatum recusandae architecto ullam, deleniti neque minima quas veritatis obcaecati eos rem fugiat.</p>
     </div>
     <div class="dialog" id="dialog2">
-        <button>Close</button>
+        <button class="closeBtn">Close</button>
         <h2>Dialogs 2</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci repellendus tempora officiis facere pariatur corporis maiores voluptatum recusandae architecto ullam, deleniti neque minima quas veritatis obcaecati eos rem fugiat.</p>
     </div>
     <div class="dialog" id="dialog3">
-        <button>Close</button>
+        <button class="closeBtn">Close</button>
         <h2>Dialogs 3</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci repellendus tempora officiis facere pariatur corporis maiores voluptatum recusandae architecto ullam, deleniti neque minima quas veritatis obcaecati eos rem fugiat.</p>
     </div>
@@ -69,6 +69,14 @@
         }
     }
 
+    closeBtns = document.querySelectorAll('.closeBtn');
+        for(closeBtn of closeBtns){
+            closeBtn.onclick = function(){
+                console.log(this.parentNode);
+                id = this.parentNode.getAttribute('id');
+                closeDialog(id);
+            }
+        }
 
     function showDialog(id){
         console.log(id);
@@ -77,12 +85,14 @@
 
         backgroundFill.classList.add('show');
         activeDialog.classList.add('show_dialog');
-
-
         // Ieprogrammēt pogu Close 
+    }
+    function closeDialog(id){
+        backgroundFill = document.querySelector('.black');
+        activeDialog = document.querySelector('#'+id);
 
-
-
+        backgroundFill.classList.remove('show');
+        activeDialog.classList.remove('show_dialog');
     }
 </script>
 </body>

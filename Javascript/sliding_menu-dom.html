@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            padding:30px;
+            background-color: green;
+            position:absolute;
+            left:-500px;
+            transition: left 500ms;
+        }
+        .menu a{
+            display: block;
+            margin:20px;
+        }
+        .open{
+            left:0px !important;
+            transition: left 500ms;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showMenu(document.querySelector('.menu'));">
+        Menu
+    </button>
+
+    <div class="menu">
+        <a href="">Pirmais</a>
+        <a href="">Otrais</a>
+        <a href="">Trešais</a>
+    </div>
+
+    <script>
+        function showMenu(menuClass){
+            menuClass.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

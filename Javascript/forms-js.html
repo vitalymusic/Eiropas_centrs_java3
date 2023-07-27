@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas</title>
+    <style>
+        div{
+            border:2px solid black;
+            margin:30px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+     <h1>Darbs ar Formām</h1>  
+     
+     <!-- 
+        vērtības palielināšana samazināšana Formas logos
+      -->
+
+      <div class="counter">
+        <button class="decrement" onclick="decrement()">-</button>
+        <input type="text" name="" id="" maxlength="2" value="0">
+        <button class="increment" onclick="increment()">+</button>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="" id="" value="true">
+        <label for="">Parādīt nākamo sadaļu</label>
+      </div>
+      <div class="subform" style="visibility: hidden;">
+        <input type="text" name="" id="">
+        <select name="city" id="">
+            <option value="">-</option>
+            <option value="1">Rīga</option>
+            <option value="2">Ogre</option>
+            <option value="3">Liepāja</option>
+        </select>
+      </div>
+      <div class="googlemaps">
+
+      </div>
+      <script>
+
+
+            function increment(){
+                inp = document.querySelector("input");
+                inp.value++;
+            }
+            function decrement(){
+                inp = document.querySelector("input");
+                if(inp.value>0){
+                    inp.value--;
+                }
+               
+            }
+      </script>
+
+
+    <script>
+        check = document.querySelector("input[type='checkbox']");
+
+
+        dati = [
+            `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139178.6403683718!2d23.96426808922226!3d56.971649186761255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfb0e5073ded%3A0x400cfcd68f2fe30!2zUsSrZ2E!5e0!3m2!1slv!2slv!4v1690473162417!5m2!1slv!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+            `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34944.63478248055!2d24.569400302444436!3d56.81095046431062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e9256ecb04739b%3A0x400cfcd68f31a60!2sOgre%2C%20Ogres%20pils%C4%93ta!5e0!3m2!1slv!2slv!4v1690473231513!5m2!1slv!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`,
+            `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d140798.40757587095!2d20.869124310043304!3d56.5370723194838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46faa7d278ba642d%3A0x400cfcd68f2fe80!2zTGllcMSBamE!5e0!3m2!1slv!2slv!4v1690473250081!5m2!1slv!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+        ]
+
+        check.onchange = function(){
+           if(this.checked){
+                document.querySelector(".subform").style.visibility="visible"
+           }else{
+            document.querySelector(".subform").style.visibility="hidden"
+           }
+        }
+
+
+        selectCityEl = document.querySelector("select[name=\"city\"]");
+        googlemapsDiv = document.querySelector(".googlemaps");
+
+        selectCityEl.onchange = function(){
+            console.log(this.value);
+
+            if(this.value){
+                googlemapsDiv.innerHTML =  dati[this.value-1];
+            }else{
+                googlemapsDiv.innerHTML = "";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

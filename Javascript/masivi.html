@@ -1,0 +1,53 @@
+<script>
+    masivs = [5, 6, 11, 19, 20];
+    // console.log(masivs.length - 1);
+
+    // Masīvu darbības. 
+    masivs.push({
+        username:"Vitalijs",
+        age:"38"
+    })
+
+    // Push papildina masīvu
+
+    masivs.unshift("Jauns elements");
+
+    // unshift papildina masīvu ieliekot elementu sākumā
+
+
+    masivs.pop();
+    // Izdzēš pēdējo elementu no masīva
+
+    masivs.shift();
+
+    // Izdzēš pirmo elementu no masīva
+    // console.log(masivs)
+
+    masivs2 = masivs.map(function(item,i,array){
+        return item*10;
+    })
+
+    // map ļauj izpildīt darbības ar katru masīva elementu
+    masivs2 = masivs.filter(function(item,i,array){
+        if(item > 10) return item
+    })
+
+
+    
+
+    // forEach darbojas līdzīgi ka map
+    masivs2 = masivs.join(masivs2)
+    masivs2 = masivs.sort();
+
+    // Sort kārto tekstu
+
+    masivs2 = masivs.sort(function(a, b){
+        return a - b
+    })
+    // šāda konstrukcija kārto skatļus augošā secībā
+
+    console.log(masivs2);
+    
+
+    // Masīvu darbības
+</script>

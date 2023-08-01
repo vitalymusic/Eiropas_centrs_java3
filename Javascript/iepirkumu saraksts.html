@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select name="products" id="">
+
+    </select>
+    <button>Nopirkt</button>
+
+
+    <div class="nopirktas_preces">
+
+    </div>
+
+
+    <script>
+        produkti = [
+            "Piens",
+            "Desa",
+            "Limonāde",
+            "Maize",
+            "Alus",
+            "Tomāti",
+            "Gurķi"
+        ]
+        grozs = [];
+
+
+        select = document.querySelector("select");
+        button = document.querySelector("button");
+
+        produkti.map(function(produkts){
+            select.innerHTML += `<option value="${produkts}">${produkts}</option>`
+        })
+
+        button.onclick = function(){
+            ieliktGroza(select.value)
+        };
+
+        function ieliktGroza(produkts){
+            grozs.push(produkts);
+            pirkums(grozs);
+            
+            
+            console.log(grozs);
+        }
+
+
+        function pirkums(grozs){
+            document.querySelector(".nopirktas_preces").innerHTML = "";
+            grozs.forEach(function(pirkums){
+                document.querySelector(".nopirktas_preces").innerHTML+=`
+                <p>
+                    ${pirkums}
+                </p>
+            `
+            });
+            
+        }
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

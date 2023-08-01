@@ -1,0 +1,32 @@
+<script>
+    // Regulāra izteikme tas tāds patterns kas tiek izmantots, lai tekstā meklētu dažādas rakszīmju kombinācijas
+
+    // +37122222222
+
+    // janis@inbox.lv
+
+    // faila nosaukums jābeidzās uz png
+
+
+
+    epasts = "janis@inbox.lv,juris@gmail.com";
+    talr = "+37122222222";
+    dzejolis = `
+    Sniega balts prieks lai nāk,
+    Piparkūkas smaržot sāk,
+    Nedzenamies vairs pēc lieka,
+    Mirkļus vadam īsta prieka.`;
+    // resultats = epasts.match(/\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/g);
+    // resultats = epasts.search(/(nis)/g);
+    
+    resultats = dzejolis.match(/\n/g);
+
+    resultats = dzejolis.replace(/\n/g,"");
+
+    console.log(resultats);
+
+    // Uzrakstīt epasta pārbaudes funkciju
+    // Ievadot lodzinā epastu tiek parbaudīts vai tas ir pareizs oninput
+    
+
+</script>

@@ -27,6 +27,35 @@
 
     // Uzrakstīt epasta pārbaudes funkciju
     // Ievadot lodzinā epastu tiek parbaudīts vai tas ir pareizs oninput
-    
+
+
 
 </script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" name="email" id="" placeholder="jusu epasts">
+        <div class="error">
+
+        </div>
+
+        <script>
+            input = document.querySelector("input");
+            input.oninput = function(){
+                    // epasts.match(/\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/g);
+                if(input.value.match(/\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/g)){
+                    document.querySelector(".error").innerHTML = "epasts pareizs"
+                }else{
+                    document.querySelector(".error").innerHTML = "epasts nepareizs"
+             }
+        }
+        </script>
+</body>
+</html>

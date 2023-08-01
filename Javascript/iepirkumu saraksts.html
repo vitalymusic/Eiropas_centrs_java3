@@ -10,6 +10,10 @@
     <select name="products" id="">
 
     </select>
+
+    <select name="gadi" id="">
+
+    </select>
     <button>Nopirkt</button>
 
 
@@ -63,11 +67,12 @@
             
         }
 
-
-
-
-
-        
+        // Uzrakstīt funckiju kas izvada saraksta lodziņā (select) visus gadus no 1920-2023
+        for(i=2023;i>=1920;i--){
+            document.querySelector("select[name='gadi']").innerHTML +=`
+             <option value="${i}">${i}</option>
+            `;
+        } 
     </script>
 </body>
 </html>

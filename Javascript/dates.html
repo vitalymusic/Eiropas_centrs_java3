@@ -4,7 +4,7 @@
 
     // document.write(result);
 
-    setInterval(function(){
+    // setInterval(function(){
     // fullDate = new Date();
     // month = fullDate.getMonth()+1;
     // year = fullDate.getFullYear();
@@ -17,16 +17,16 @@
     //     ${date<10?"0"+date:date}.${month}.${year} ${hour}:${minute}:${second}
     //    `;
 
-    fullDate = new Date();
-    today = Date.now();
-    pec_nedeļas = today+(1000*60*60*24*7);
-    date2 = new Date(pec_nedeļas);
-    document.body.innerHTML = `
-    Šodienas datums: ${showDate(fullDate)}
-    Nākošās nedēļas datums: ${showDate(date2)}
-    `;
-    // console.log(date2)
-    },1000)
+    // fullDate = new Date();
+    // today = Date.now();
+    // pec_nedeļas = today+(1000*60*60*24*7);
+    // date2 = new Date(pec_nedeļas);
+    // document.body.innerHTML = `
+    // Šodienas datums: ${showDate(fullDate)}
+    // Nākošās nedēļas datums: ${showDate(date2)}
+    // `;
+    // // console.log(date2)
+    // },1000)
     
     // dateparse('YYYY-MM-DDTHH:mm:ss.sssZ')
     // new Date(year, monthIndex, day, hours, minutes)
@@ -35,23 +35,35 @@
 
     console.log(september1);
 
-    function showDate(fullDate){
-        month = fullDate.getMonth()+1;
-        year = fullDate.getFullYear();
-        date = fullDate.getDate();
-        hour = fullDate.getHours();
-        minute = fullDate.getMinutes();
-        second = fullDate.getSeconds();
-        day = fullDate.getSeconds();
-        dienasnumurs = getDay() //0-6
-        return date
+    // function showDate(fullDate){
+    //     month = fullDate.getMonth()+1;
+    //     year = fullDate.getFullYear();
+    //     date = fullDate.getDate();
+    //     hour = fullDate.getHours();
+    //     minute = fullDate.getMinutes();
+    //     second = fullDate.getSeconds();
+    //     day = fullDate.getSeconds();
+    //     dienasnumurs = getDay() //0-6
+    //     return date
         
-    }
+    // }
 
 
     // Datums tiek ievadīts teksta laukā, pārvērst tekstu par datuma Objektu un izvadīt to console.log()
 
+
     // Date.parse("2019-01-01T00:00:00.000Z");
     // Date.parse("02 01 1970");
+
+    // datums un laiks datorā tiek glabāts kā cipars milisekundēs (no 1970 01 01);
+
+      console.log(new Date(Date.parse(prompt('Ievadi datumu formātā: menesis diena gads'))));      
+
+
+
+      
+
+
+
 </script>
 

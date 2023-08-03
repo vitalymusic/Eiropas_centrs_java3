@@ -1,0 +1,35 @@
+<script>
+    address="https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/";
+    address="https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY";
+    // address="https://whiskyhunter.net/api/auctions_data/?format=json";
+
+
+
+
+        //  vaicājumu veidošana ar JS
+
+//   async function logMovies() {
+//   const response = await fetch(address);
+//   const movies = await response.json();
+//   console.log(movies);
+// }  
+
+xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function(){
+    if(xhr.readyState == 4){
+    console.log(xhr.response);
+    }
+}
+xhr.open("GET",address);
+xhr.send();
+</script>
+
+
+// <!-- API
+//     https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
+
+// -->
+
+
+
+

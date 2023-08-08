@@ -13,7 +13,10 @@
     <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
     <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
     <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
-    <h1>Otrs virsraksts</h1>
+    <h1>Bilžu galerija</h1>
+    <div class="gallery">
+
+    </div>
 
 
     <script>
@@ -44,13 +47,19 @@
         $(document.body).append(html);
 
 
+        // vaicājumi izmantojot Jquery
 
+        // https://picsum.photos/v2/list
 
-
-
-
-
-
+       
+                 list = $.get("https://picsum.photos/v2/list?page=2&limit=100",function(response){
+                    // console.log(response);
+                    response.forEach(function(img){
+                        $('.gallery').append(`
+                        <img class="img" src="${img.url}">
+                    `);
+                    });
+                });
 
         });
     </script>

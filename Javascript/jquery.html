@@ -56,7 +56,7 @@
                     // console.log(response);
                     response.forEach(function(img){
                         $('.gallery').append(`
-                        <img class="img" src="${img.url}">
+                        <img class="img" src="${img.download_url}"  width="50%">
                     `);
                     });
                 });

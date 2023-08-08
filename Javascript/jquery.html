@@ -9,11 +9,50 @@
 <body>
     <h1>JQUERY</h1>
     <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
-
+    <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
+    <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
+    <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
+    <p>jQuery ir starpplatformu JavaScript bibliotēka, kas izstrādāta, lai vienkāršotu HTML klientpuses skriptošanu.[3] jQuery pašlaik ir izmantotākā JavaScript bibliotēka, tā ir uzstādīta 65% no 10 miljoniem visvairāk apmeklētāko mājaslapu.</p>
+    <h1>Otrs virsraksts</h1>
 
 
     <script>
+        $(document).ready(function(){
+            // jquery kodu raksta šeit
         
+        $('h1').css({
+            color:"red",
+            background:"blue",
+            fontSize:"18pt"
+        });   
+        
+        $('p')
+            // .first()
+            .html(`Izmainīts teksts`)
+            .addClass('myClass')
+            .click(function(){
+                $(this).fadeOut();
+            });
+            html = `
+                <div>
+                    <form>
+                        <input type="text">
+                        <button type="submit">Saglabāt</button>
+                    </form>    
+                </div>    
+            `;
+        $(document.body).append(html);
+
+
+
+
+
+
+
+
+
+
+        });
     </script>
 </body>
 </html>

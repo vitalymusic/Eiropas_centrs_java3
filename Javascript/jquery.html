@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JQUERY</title>
+    <style>
+        :root{
+            box-sizing: border-box;
+        }
+        .gallery{
+            display:grid;
+           grid-template-columns: auto auto auto auto;
+            gap:5px;
+            /* flex-basis: 25%; */
+        }
+        img{
+            width: 100%;
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 <body>
@@ -56,7 +70,7 @@
                     // console.log(response);
                     response.forEach(function(img){
                         $('.gallery').append(`
-                        <img class="img" src="${img.download_url}"  width="50%">
+                        <img class="img" src="${img.download_url}">
                     `);
                     });
                 });
